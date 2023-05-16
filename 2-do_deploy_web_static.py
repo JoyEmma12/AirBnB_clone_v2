@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Script that distributes an archieve on the web server
-"""
+# Script that distributes an archieve on the web server
 import os.path
 from fabric.api import env
 from fabric.api import put
