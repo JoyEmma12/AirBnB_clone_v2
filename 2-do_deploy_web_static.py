@@ -5,7 +5,7 @@ from fabric.api import env
 from fabric.api import put
 from fabric.api import run
 
-env.hosts = ["100.25.36.157", "100.25.154.130"]
+env.hosts = ['100.25.36.157', '100.25.154.130']
 
 
 def do_deploy(archive_path):
@@ -14,7 +14,7 @@ def do_deploy(archive_path):
     if the file at the path does not exist
     """
     if os.path.isfile(archive_path) is False:
-        return
+        return False
     file = archive_path.split("/")[-1]
     name = file.split(".")[0]
 
