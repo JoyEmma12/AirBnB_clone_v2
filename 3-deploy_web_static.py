@@ -28,6 +28,7 @@ def do_pack():
         return None
     return file
 
+
 def do_deploy(archive_path):
     """Distributes an archive to a web server.
 
@@ -68,11 +69,12 @@ def do_deploy(archive_path):
         return False
     return True
 
+
 def deploy():
-	"""
-	Distributes archive to web server
-	"""
-	file = do_pack()
-	if file is None:
-		return False
-	return do_deploy(file)
+    """
+    Distributes archive to web server
+    """
+    file = do_pack()
+    if file is None:
+        return False
+    return do_deploy(file)
