@@ -9,7 +9,6 @@ from fabric.api import run
 
 env.hosts = ["100.25.36.157", "100.25.154.130"]
 
-
 def do_deploy(archive_path):
     """Distributes an .tgz archive through web servers
     """
