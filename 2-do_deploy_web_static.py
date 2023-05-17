@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Script that distributes an archieve on the web server
-"""
+# Fabfile to distribute an archive to a web server.
 import os.path
 from fabric.api import env
 from fabric.api import put
@@ -11,7 +9,13 @@ env.hosts = ["100.25.36.157", "100.25.154.130"]
 
 
 def do_deploy(archive_path):
-    """Distributes an .tgz archive through web servers
+    """Distributes an archive to a web server.
+
+    Args:
+        archive_path (str): The path of the archive to distribute.
+    Returns:
+        If the file doesn't exist at archive_path or an error occurs - False.
+        Otherwise - True.
     """
     if os.path.isfile(archive_path) is False:
         return False
