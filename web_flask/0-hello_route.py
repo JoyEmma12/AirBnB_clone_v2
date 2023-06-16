@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """
 Stsrts flask application
-web application must be listening to 0.0.0.0 
+web application must be listening to 0.0.0.0
 port 5000
 """
 from flask import Flask
 
 app = Flask(__name__)
+
 
 @app.route('/', strict_slashes=False)
 def hello_hbnb():
